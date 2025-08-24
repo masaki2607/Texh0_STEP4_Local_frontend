@@ -1,10 +1,12 @@
-// pages/reset-password.tsx（パスワードの再設定ページ）
-import { useState } from "react";
-import { useRouter } from "next/router";
+// app/login/reset-password.tsx（パスワードの再設定ページ）
+"use client";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function ResetPassword() {
   const router = useRouter();
-  const { empId } = router.query;
+  const searchParams = useSearchParams();
+  const empId = searchParams.get('empId');
 
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");

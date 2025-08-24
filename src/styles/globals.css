@@ -2,12 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* すべてのページに適用される共通スタイル */
+html,
 body {
-  @apply bg-gray-50 text-gray-900;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937; /* Tailwind gray-800 */
 }
 
+/* スクロールバーのカスタマイズ（Webkitのみ） */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.5); /* slate-500 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(71, 85, 105, 0.7); /* slate-600 */
+}
+
+/* aタグのデフォルトスタイル */
+a {
+  color: #2563eb; /* blue-600 */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* あべちゃんコード */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900;
+} */
+
 /* スクロールバーのスタイリング */
-.chat-container::-webkit-scrollbar {
+/* .chat-container::-webkit-scrollbar {
   width: 6px;
 }
 
@@ -21,13 +62,13 @@ body {
 
 .chat-container::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-400;
-}
+} */
 
 /* 入力フィールドの基本スタイル */
-.input-field {
+/* .input-field {
   @apply border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
 }
 
 .btn-primary {
   @apply bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
-}
+} */

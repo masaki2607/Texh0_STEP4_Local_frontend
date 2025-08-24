@@ -1,0 +1,38 @@
+/* カードコンポーネント */
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* タイトル */
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111827; /* gray-900 */
+}
+
+
+/* ボタンコンポーネント */
+.primaryButton {
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.primaryButton:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+    

@@ -488,13 +488,18 @@ const Dashboard = () => {
                                 </div>
                                 
                                 {/* マッチング結果 - 求人情報 */}
-                                {matchedJobs.length > 0 && (
-                                    <MatchingJobList matchedJobs={matchedJobs} />
-                                )}
+                                <MatchingJobList matchedJobs={matchedJobs} />
                             </div>
                         )}
                     </div>
                 )}
+                
+                {/* 画面には出さないが、初期表示時にバックエンド fetch を走らせるための隠しインスタンス */}
+                {!analysisComplete && (
+                  <div className="hidden">
+                    <MatchingJobList matchedJobs={matchedJobs} />
+                  </div>
+              )}
             </div>
         </div>
     );
